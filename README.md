@@ -33,9 +33,9 @@ This project demonstrates user authentication and a complete CRUD system for man
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/your-username/laravel-sanctum-task-api.git
+git clone https://github.com/saikat62300/laravel_sanctum.git
 
-cd laravel-sanctum-task-api
+cd laravel_sanctum/backend
 
 composer install
 
