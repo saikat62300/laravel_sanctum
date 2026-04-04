@@ -20,13 +20,14 @@ class UserController extends Controller
                     'email'      => $request->email,
                     'password'   => Hash::make($request->password),
                     'created_at' => Carbon::now(),
-                    'updated_at' => null,
+                    'updated_at' => null
                 ]);
 
                 return $this->success([
                     'user' => $user, 
                     'token' => $user->createToken('API Token of '. $user->email)->plainTextToken
                     ], 'User registered successfully', 200);
+                    
             } catch (\Exception $e) {
                 return $this->error($e->getMessage(), 500);
             }
