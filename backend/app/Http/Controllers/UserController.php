@@ -24,8 +24,7 @@ class UserController extends Controller
                 ]);
 
                 return $this->success([
-                    'user' => $user, 
-                    'token' => $user->createToken('API Token of '. $user->email)->plainTextToken
+                    'user' => $user
                     ], 'User registered successfully', 200);
             } catch (\Exception $e) {
                 return $this->error($e->getMessage(), 500);
